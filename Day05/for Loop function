@@ -22,3 +22,15 @@ for x in fruits:
     print(x)
 
 #   apple
+
+
+fruits = ["apple","banana","orange"]
+for x in fruits:
+    
+    if x == "banana":
+        continue
+    print(x)
+
+#    apple
+#    orange
+#
