@@ -1,0 +1,49 @@
+class Bankaccount:
+    def __init__(self,name,account_number,balance):
+        self.name = name
+        self.acc = account_number
+        self.balance = balance
+
+    def deposit(self):
+        print("Want to deposit money to account ")
+        deposit = float(input("Enter deposit amount: "))
+        self.balance += deposit
+
+    def withdraw(self):
+        print("Want to withdraw money to account ")
+        withdraw = float(input("Enter withdraw amount: "))
+        self.balance -= withdraw
+
+    def check_balance(self):
+        print("---Your account details---")
+        print("Account holder name: ",self.name)
+        print("Account number: ",self.acc)
+        print("current balance: ",self.balance)
+
+name = input("Enter the Account holder name: ")
+account_number = int(input("Enter the Account number:"))
+balance = float(input("Enter balance: "))
+
+acc1 = Bankaccount(name,account_number,balance)
+
+while True:
+    print("---Bank system---")
+    print("1. bank details")
+    print("2. money deposit")
+    print("3. money withdraw")
+    print("4. Exit")
+
+    choice = int(input("Enter your choice(1-4): "))
+    if choice == 1:
+        acc1.check_balance()
+    elif choice == 2:
+        acc1.deposit()
+        print("Money deposit succesfully")
+    elif choice == 3:
+        acc1.withdraw()
+        print("Money withdraw succcesfully")
+    elif choice == 4:
+        print("Exit")
+        break
+    else:
+        print("Invalid statement\nTry again")
