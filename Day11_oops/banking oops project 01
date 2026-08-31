@@ -1,20 +1,23 @@
 class Bankaccount:
-    def __init__(self,name,account_number,balance):
+    def __init__(self,name,account_number,balance): # attributes 
         self.name = name
         self.acc = account_number
         self.balance = balance
 
-    def deposit(self):
+    # def show_balance(self): # --- not working statement
+    #     print(self.__balance)
+
+    def deposit(self): # methods 
         print("Want to deposit money to account ")
         deposit = float(input("Enter deposit amount: "))
         self.balance += deposit
 
-    def withdraw(self):
+    def withdraw(self): # methods 
         print("Want to withdraw money to account ")
         withdraw = float(input("Enter withdraw amount: "))
         self.balance -= withdraw
 
-    def check_balance(self):
+    def check_balance(self):  # methods 
         print("---Your account details---")
         print("Account holder name: ",self.name)
         print("Account number: ",self.acc)
