@@ -1,0 +1,53 @@
+
+import random as rd
+
+game = ["paper","rock","scissor"]
+
+wins = 0
+loss = 0
+tie = 0
+attempts = int(input("Enter you rounds : "))
+round = 0
+print("---rock,paper,scissor game---")
+print("rock\npaper\nscissor\n")
+
+while attempts >0:
+    print(f"===round {round +1} === ")
+
+    computer = rd.choice(game)
+    user_choice = input("Enter your choice : ").lower()
+
+    if user_choice in game:
+        if user_choice == computer:
+            tie +=1
+        else:
+            if computer == "rock":
+                if user_choice =="paper":
+                    wins +=1
+                else:
+                    loss +=1
+            elif computer == "paper":
+                if user_choice == "scissor":
+                    wins +=1
+                else:
+                    loss +=1
+            elif computer == "scissor":
+                if user_choice == "rock":
+                    wins +=1
+                else:
+                    loss +=1
+        attempts -=1
+        round +=1
+        print(f"computer choice : {computer}")
+        print(f"user choice : {user_choice}")
+    else:
+        print("invalid choice...")
+
+if wins > loss:
+    print("you wins the game...")
+elif wins == loss:
+    print("the game is tie...")
+else:
+    print("you loss the game...")
+
+print(f"wins : {wins}\nloss : {loss}\nTie : {tie}")
