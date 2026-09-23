@@ -1,4 +1,4 @@
-# Right angle triangle pattern
+# pyramid triangle pattern
 
 rows =int(input("Enter no of rows: "))
 
@@ -8,6 +8,12 @@ for x in range(1,rows + 1):
         for y in range(rows-x):
                 print(" ",end="")
         for y in range(x):
-                print("* ",end="")
+                print("*",end=" ")
         print()
-    
+
+# Enter no of rows: 5
+#     * 
+#    * * 
+#   * * * 
+#  * * * * 
+# * * * * *
