@@ -13,42 +13,67 @@ def main_menu():
 6. Delete Student
 7. Exit""")
 
-# the main file contain the sub dictinary 
 student = {}
-# add student function
+
 def add_fun():
-  name = input("Enter the name : ")
-  if name in student: 
-    print("student name already in details")
+    student["Roll Number"] = int(input("Enter the roll number of student : "))
+    student["Name"] = input("Enter the name of student : ")
+    student["CGPA"] = float(input("Enter the currect cgpa : "))
+    student["other details"] = input("Enter the any other details as required : ")
 
-  else:
-    student["Name"] = name
-    student["Roll number"] = input("Enter the roll number : ")
-    student["CGPA "] = float(input("Enter you cgpa"))
-
-add_fun()
-
+    print("Student details added succesfully")
 
 def view_fun():
-   print("---Student Details---")
-
-   for key, value in student.items():
-    print( key,":",value)
-
-   print ("===done===")
-
-view_fun()
+    if student:
+        print("=== student details ===")
+        for key ,value in student.items():
+            print(key,":",value )
 
 def search_fun():
-  name = input("Enter the name to search : ")
-  if name in student:
-    print(f"---student details---")
-    print(f"Name:{student(name)}")
-    print(f"Roll Number:{student["Roll number"]}")
-    print(f"CGPA :{student['CGPA']}")
+    roll = int(input("Enter the roll number to search : "))
 
-  else:
-      print("Name not found\n")
+    for value in student.values():
+        if value == roll:
+            print("---details found---")
+            view_fun()
+
+def top_fun():
+    find = int(input("Enter the requried cgpa value : "))
+    
+    for value in student.values():
+        if value > find:
+            print(f"found the students of same cgpa {find}")
+            view_fun()
+
+while True:
+    main_menu()
+    choice = int(input("Enter your choice (1-7): "))
+    if choice == 1:
+        add_fun()
+    elif choice == 2:
+        view_fun()
+    elif choice == 3:
+        search_fun()
+    elif choice == 4:
+        top_fun()
+    else:
+        print("Exit")
+        break
+
+
+
 
 search_fun()
+view_fun()
+
+        
+
+
+
+
+
+
+
+
+
 
