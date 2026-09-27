@@ -1,10 +1,10 @@
-def greet():
-    print("Hello! Welcome to the program.")
+# def greet():
+#     print("Hello! Welcome to the program.")
 
-greet()
+# greet()
 
-with parameter and arguments
-def name(name):
-    print(f"Hello, my name is {name}.")
+# with parameter and arguments
+# def name(name):
+#     print(f"Hello, my name is {name}.")
 
-name("Sourabh")
+# name("Sourabh")
