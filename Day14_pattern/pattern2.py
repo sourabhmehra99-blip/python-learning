@@ -1,4 +1,4 @@
-# Squa re  pattern 
+# Square  pattern 
 
 row = int(input("Enter number of rows : "))
 for y in range(1,row + 1):
