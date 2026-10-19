@@ -1,9 +1,9 @@
 # Filter only negative and zero in the list using list comprehension
 
-# numbers = [-4, -3, -2, -1, 0, 2, 4, 6, 7, 8,]
+numbers = [-4, -3, -2, -1, 0, 2, 4, 6, 7, 8,]
 
-# lst = [i for i in numbers if i>0 ]
-# print(lst)
+lst = [i for i in numbers if i>0 ]
+print(lst)
 
 # Flatten the following list of lists of lists to a one dimensional list :
 
