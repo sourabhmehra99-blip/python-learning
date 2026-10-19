@@ -22,3 +22,8 @@ students = [
 ]
 students.sort(key=lambda x:x[1])
 print(students)
+
+def power(x):
+    return lambda n:x **n
+
+print(power(2)(3))
