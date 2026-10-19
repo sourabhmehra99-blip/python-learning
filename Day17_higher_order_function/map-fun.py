@@ -1,3 +1,8 @@
+# The map() function is a built-in function that takes a function and iterable as parameters.
+
+#     # syntax
+#     map(function, iterable)
+
 number =[1,2,3,4,5]
 
 def square(x):
