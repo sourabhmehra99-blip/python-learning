@@ -23,6 +23,7 @@ students = [
 students.sort(key=lambda x:x[1])
 print(students)
 
+# Lambda Function Inside Another Function
 def power(x):
     return lambda n:x **n
 
