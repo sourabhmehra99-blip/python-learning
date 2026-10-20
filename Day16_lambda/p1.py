@@ -4,27 +4,31 @@
 
 # basic lambda function code
 
-add_nums = lambda a,b,c: a+b+c
-print(add_nums(4,2,4))
+# add_nums = lambda a,b,c: a+b+c
+# print(add_nums(4,2,4))
 
-square = lambda n: n**2
-print(square(4))
+# square = lambda n: n**2
+# print(square(4))
 
-number = [1,2,3,4,5,6]
+# number = [1,2,3,4,5,6]
 
-even_num = list(filter(lambda x:x%6 ==0,number))
-print(even_num)
+# even_num = list(filter(lambda x:x%6 ==0,number))
+# print(even_num)
 
-students = [
-    ("kumal",86),
-    ("aman",77),
-    ("neha",91)
-]
-students.sort(key=lambda x:x[1])
-print(students)
+# students = [
+#     ("kumal",86),
+#     ("aman",77),
+#     ("neha",91)
+# ]
+# students.sort(key=lambda x:x[1])
+# print(students)
 
-# Lambda Function Inside Another Function
-def power(x):
-    return lambda n:x **n
+# # Lambda Function Inside Another Function
+# def power(x):
+#     return lambda n:x **n
 
-print(power(2)(3))
+# print(power(2)(3))
+
+number = (map(int,input("Enter the number: ").split()))
+print(list(number))
+print(number)
