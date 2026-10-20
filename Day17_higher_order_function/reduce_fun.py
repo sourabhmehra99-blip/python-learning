@@ -3,8 +3,6 @@
 #  Like map and filter it takes two parameters, a function and an iterable.
 #  However, it does not return another iterable, instead it returns a single value.
 
-
-
 from functools import reduce
 
 numbers_str = ['1', '2', '3', '4', '5']  # iterable
