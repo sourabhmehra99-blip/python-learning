@@ -30,3 +30,15 @@ def odd_num(num):
 odd_number = list(filter(odd_num,numbers))
 print(odd_number)
 
+# Filter long name
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+
+def long_name(name):
+    if len(name) > 7:
+        return True
+    return False
+
+new_name =list(filter(long_name,names))
+print(new_name)
+
+
