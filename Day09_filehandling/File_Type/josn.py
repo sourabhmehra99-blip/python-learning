@@ -22,7 +22,9 @@ person_dict = {
 }
 
 # let's convert it to  json
-person_josn = jo.dumps(person_dict,indent =4)
+person_josn = jo.dumps(person_dict,indent =2)
+# indent could be 2, 4, 8.
+# It beautifies the json.It gives space it output
 print(type(person_josn))
 print(person_josn)
 
