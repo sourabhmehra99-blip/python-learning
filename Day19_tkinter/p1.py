@@ -8,12 +8,12 @@ from tkinter import *
 # window.mainloop()
 
 window = Tk()
-window.title("MY_GUI") # title key_word help to change title in tkinter GUI
+window.title("MY_first_program") # title key_word help to change title in tkinter GUI
 window.geometry("520x520")
 
 "{for change icon of Tk "
 "we use"
 "icon =PhotoImage(file = file_name)"
 "window.iconphoto(True,icon)}"
-
+window.config(background="red") # it will help to change background colour by name and also hexadecimal value
 window.mainloop()
