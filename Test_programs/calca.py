@@ -7,6 +7,9 @@ def Ent():
 def delete():
     display.delete(0,END)
 
+def back():
+    display.delete(len(display.get())-1,END)
+
 
 window =Tk()
 window.geometry("420x530")
@@ -18,6 +21,9 @@ display.pack()
 
 entry = Button(window,text="ANS",font=('arial',40),command=Ent)
 entry.pack(side=RIGHT)
+
+back_button =Button(window,text="backspace",font=("Arial",40),command=back)
+back_button.pack()
 
 delete_button =Button(window,text="delete",font=('arial',40),command=delete)
 delete_button.pack(side=LEFT)
