@@ -1,0 +1,24 @@
+from tkinter import *
+
+def Ent():
+    cal = entry.get()
+    print(cal)
+
+def delete():
+    entry.delete(0,END)
+
+
+window =Tk()
+window.geometry("420x530")
+window.title("Calculator")
+
+display = Entry(window,font=("arial",40,'bold'))
+display.config(bg="#0B140B",fg="white")
+display.pack()
+
+entry = Button(window,text="ANS",font=('arial',40),command=Ent)
+entry.pack(side=LEFT)
+
+delete_button =Button(window,text="delete",font=('arial',40),command=delete)
+delete_button.pack()
+window.mainloop()
