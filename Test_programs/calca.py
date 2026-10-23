@@ -1,11 +1,11 @@
 from tkinter import *
 
 def Ent():
-    cal = entry.get()
+    cal = display.get()
     print(cal)
 
 def delete():
-    entry.delete(0,END)
+    display.delete(0,END)
 
 
 window =Tk()
