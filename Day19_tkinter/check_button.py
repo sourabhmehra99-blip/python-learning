@@ -2,7 +2,7 @@
 
 
 def display():
-    if(x.get()): # don't need any compair
+    if(x.get()=="Yes"): # don't need any compair
         print("you agree (:")
     else:
         print("you not agree :(")
@@ -10,14 +10,15 @@ from tkinter import *
 
 window = Tk()
 
-# x = IntVar() # use for variable makeing
-x = BooleanVar() # use booleanvar 
+# x = IntVar() # use for variable makeing (1 and 0)
+# x = BooleanVar() # use booleanvar (true and false)
+x = StringVar() # any sting value
 
 check = Checkbutton(window,text="I agree to you",
                     font=('Ink free',30),
                     variable=x, # using integer variable
-                    onvalue=True, 
-                    offvalue=False,
+                    onvalue="Yes", 
+                    offvalue="No",
                     command=display,
                     fg="#00FF00",
                     bg="black",
