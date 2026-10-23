@@ -13,6 +13,9 @@ for index in range(len(skill)):
                                value=index, # assign each radio button a different value
                                font=("Inpact",20),
                                padx= 40,pady=20,
+                               indicatoron=0 ,# eleminate circle indicator
+                               #       width=222, set width
+                               
                                )
     radio_button.pack(anchor=W)
 
