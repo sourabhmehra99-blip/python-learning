@@ -29,7 +29,7 @@ def click():
 window = Tk()
 button = Button(window,text='click here')
 button.config(command=click)
-button.pack()
+button.pack(side=BOTTOM)
 label =Label(window,text=count)
 label.pack()
 window.mainloop()
