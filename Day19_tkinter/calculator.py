@@ -71,18 +71,28 @@ decimal = Button(frame,text=".",width=9,height=2,font=35,
 decimal.grid(row=3,column=1)
 
 equal = Button(frame,text="=",width=9,height=2,font=35,
-               command=lambda:button_press("="))
+               command=lambda:equal())
 equal.grid(row=3,column=2)
 
 plus = Button(frame,text="+",width=9,height=2,font=35,
               command=lambda:button_press("+"))
 plus.grid(row=0,column=3)
 
-minus = Button(frame,text="-",width=9.height=2,font=35,
+minus = Button(frame,text="-",width=9,height=2,font=35,
                command=lambda:button_press("-"))
 minus.grid(row=1,column=3)
 
 multply = Button(frame,text="x",width=9,height=2,font=35,
                  command=lambda:button_press("*"))
+multply.grid(row=2,column=3)
+
+divide = Button(frame,text="/",width=9,height=2,font=35,
+                command=lambda:button_press("/"))
+divide.grid(row=3,column=3)
+
+clear = Button(window,text="clear",width=9,height=2,font=30,
+               command=lambda:clear)
+clear.pack()
+
 
 window.mainloop()
