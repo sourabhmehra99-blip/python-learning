@@ -7,10 +7,23 @@ def button_press(num):
     display_label.set(display_text)
 
 def equal():
-    pass
+    global display_text
+    try:
+      total = str(eval(display_text))
+      display_label.set(total)
+      display_text = total
+    except SyntaxError:
+        display_label.set("Syantax Error")
+        display_text = ""
+    except ZeroDivisionError:
+        display_label.set("Arthmatic error")
+        display_text = ""
 
 def clear():
-    pass
+    global display_text
+
+    display_label.set('')
+    display_text = ''
 
 
 window = Tk()
@@ -75,7 +88,7 @@ decimal = Button(frame,text=".",width=9,height=2,font=35,
 decimal.grid(row=3,column=1)
 
 equal = Button(frame,text="=",width=9,height=2,font=35,
-               command=lambda:equal)
+               command= equal)
 equal.grid(row=3,column=2)
 
 plus = Button(frame,text="+",width=9,height=2,font=35,
@@ -95,7 +108,7 @@ divide = Button(frame,text="/",width=9,height=2,font=35,
 divide.grid(row=3,column=3)
 
 clear = Button(window,text="clear",width=9,height=2,font=30,
-               command=lambda:clear)
+               command= clear)
 clear.pack()
 
 
