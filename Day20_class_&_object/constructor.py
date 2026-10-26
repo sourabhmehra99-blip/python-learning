@@ -19,3 +19,40 @@ print(p)
 # output >--
 # Sourabh Mehra
 # <__main__.Person object at 0x0000026DCF8586E0>
+
+# Let us add more parameters to the constructor function.
+
+class Person:
+     def __init__(self,name,age,country,city,hobby):
+          self.name = name
+          self.age = age
+          self.country = country
+          self.city = city
+          self.hobby = hobby
+
+p1 = Person('Sourabh Mehra',21,"India","Indore","learning")
+print(f"name:{p1.name}")
+print(p1.age)
+print(p1.country)
+print(p1.city)
+print(p1.hobby)
+
+p2 = Person('sahil Mehra',18,"India","Indore","chess playing")
+
+print(f"name:{p2.name}")
+print(p2.age)
+print(p2.country)
+print(p2.city)
+print(p2.hobby)
+
+# output <--
+# name:Sourabh Mehra
+# 21
+# India
+# Indore
+# learning
+# name:sahil Mehra
+# 18
+# India
+# Indore
+# chess playing
