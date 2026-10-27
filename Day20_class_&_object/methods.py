@@ -9,8 +9,8 @@ class Car:
     def Car_info(self): # (self) provide the info by object
         return (f"car Brand : {self.brand}\ncar model : {self.model}\ncar colour :{self.colour}")
 
-# car1 = Car("Audi","BE 5","black")
-# print(car1.Car_info())
+car1 = Car("Audi","BE 5","black")
+print(car1.Car_info())
 
 # Object Default Methods
 # Sometimes, you may want to have default values for your object methods.
@@ -42,30 +42,37 @@ print(p2.person_info())
 # City : maxico
 
 class Person:
-      def __init__(self, firstname='Asabeneh', lastname='Yetayeh', age=250, country='Finland', city='Helsinki'):
-          self.firstname = firstname
-          self.lastname = lastname
-          self.age = age
-          self.country = country
-          self.city = city
-          self.skills = []
+    def __init__(self,name,age,city):
+        self.name = name
+        self.age = age
+        self.city = city
+        self.skill = []
 
-      def person_info(self):
-        return f'{self.firstname} {self.lastname} is {self.age} years old. He lives in {self.city}, {self.country}.'
-      def add_skill(self, skill):
-          self.skills.append(skill)
+    def person_info(self):
+        return (f"Name : {self.name}\nAge : {self.age}\nCity : {self.city}")
 
-p1 = Person()
-print(p1.person_info())
+    def add_skill(self,skill):
+        self.skill.append(skill)
+
+p1 = Person("john",21,"none")
+p1.add_skill("python")
 p1.add_skill('HTML')
-p1.add_skill('CSS')
-p1.add_skill('JavaScript')
-p2 = Person('John', 'Doe', 30, 'Nomanland', 'Noman city')
-print(p2.person_info())
-print(p1.skills)
-print(p2.skills)
+print(p1.person_info())
+print(f"skills :{p1.skill}")
 
-# Asabeneh Yetayeh is 250 years old. He lives in Helsinki, Finland.
-# John Doe is 30 years old. He lives in Noman city, Nomanland.
-# ['HTML', 'CSS', 'JavaScript']
-# []
+p2 = Person('alex',33,"USA")
+print(p2.person_info())
+print(f"Skill : {p2.skill}")
+
+# Output <--
+# Name : john
+# Age : 21
+# City : maxico
+# Name : john
+# Age : 21
+# City : none
+# skills :['python', 'HTML']
+# Name : alex
+# Age : 33
+# City : USA
+# Skill : []
