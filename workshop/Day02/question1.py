@@ -26,3 +26,17 @@ else:
            else:
                print(d , "is greater")
 
+
+
+# using max and min function 
+# not usong map function
+
+n = [int(x) for x in input("Enter 4 number: ").split()]
+if (len(n)==4):
+    if (n[0]==n[1]==n[2]==n[3]):
+        print("All 4 number is equal.")
+    else:
+        print("Greatest number: ",max(n))
+        print("Smallest number: ",min(n))
+else:
+    print("need only 4 numbers.")
