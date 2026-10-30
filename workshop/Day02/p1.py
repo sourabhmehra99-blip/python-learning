@@ -18,7 +18,16 @@
 # # 2
 
 # Membership operators - in ,not in
-name = "souarbh"
-print('s' in name)  # True
-print('z' not in name)  # True
-print('t' in name)  # False
+
+# name = "souarbh"
+# print('s' in name)  # True
+# print('z' not in name)  # True
+# print('t' in name)  # False
+
+# Identity operators - is , is not
+x = 10
+y = 20
+
+print(x is y)   # False
+print(x is not y)   # True
+print(id(x))  # prints the memory address of x
