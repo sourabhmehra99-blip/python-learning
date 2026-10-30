@@ -36,7 +36,7 @@ print(f"Numbers are {n1}\n{n2}\n{n3}")
 n1,n2,n3, = map(int,input("Enter three numbers : ").split())
 print(f"Numbers are {n1}\n{n2}\n{n3}")
 
-lambda function syantax
+# lambda function syantax
 a = 4
 b = 10
 sum = lambda x,y : x+y
