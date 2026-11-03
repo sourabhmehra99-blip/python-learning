@@ -27,7 +27,19 @@ for i in range(start,end):
     if isprime:
         print(i,end=" ")
 
+# how to make this pattern 
+# * * * * 
+# *     * 
+# *     * 
+# * * * *
 
+for i in range(1,5):
+    for j in range(1,5):
+        if i == 1 or i == 4 or j == 1 or j ==4 :
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
 
 
 
