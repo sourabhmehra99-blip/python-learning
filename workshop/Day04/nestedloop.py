@@ -16,16 +16,18 @@
 #     i+=1
     
 #   prime number 
-num = int(input("Enter number: "))
+start,end = map(int,input("Enter number: ").split())
 
-for i in range(1,num):
+for i in range(start,end):
     isprime = True
     for j in range(2,i//2+1):
         if i % j == 0:
             isprime = False
             break
     if isprime:
-        print(i)
+        print(i,end=" ")
+
+
 
 
 
