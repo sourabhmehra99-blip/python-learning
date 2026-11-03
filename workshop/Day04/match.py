@@ -51,3 +51,21 @@ while True:
             print("Invalid choice...")
             
 
+num = int(input("Enter your number : "))
+i =2
+isprime = True
+
+# while i<=num//2+1:
+#     isprime = False
+#     i+=1
+#     break
+
+for j in range(2,num//2+1):
+    if num % j == 0:
+        isprime = False
+        break
+
+if isprime:
+    print(" prime")
+else:
+    print("not a prime")
