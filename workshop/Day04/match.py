@@ -24,4 +24,30 @@ match number:
     case _:
         print("not valid")
 
+balance = 3000
+while True:
+    print("1. Check balance\n2. deposit\n3. withdrawl\n4. Exit")
+    
+    choice = int(input("Enter your choice(1-4): "))
+
+    match choice:
+        case 1:
+            print(f"your balance : {balance}")
+        case 2:
+            amount = int(input("Enter deposit amount: "))
+            balance += amount
+            print(f"your balance : {balance}")
+        case 3:
+            amount = int(input("Enter withdrawl amount: "))
+            if amount > balance:
+                print("Insuffecient amount")
+            else:
+                balance -= amount
+                print(f"your balance : {balance}")
+        case 4:
+            print("Exiting")
+            break
+        case _:
+            print("Invalid choice...")
+            
 
