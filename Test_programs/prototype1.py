@@ -109,9 +109,14 @@ window = Tk()
 window.title("unit conversion")
 window.geometry("400x500")
 
+display_text = ""
+dispaly_label = StringVar()
+
 frame = Frame(window)
 frame.pack()
 
+label = Label(window,text=dispaly_label,font=('consolas',20),fg="white",background='black',width=28,height=2)
+label.pack()
 
 window.mainloop()
 
