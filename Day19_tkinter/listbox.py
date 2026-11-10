@@ -2,6 +2,11 @@
 
 from tkinter import *
 
+def add_func():
+    listbox.insert(listbox.size()+1,entry.get())
+    listbox.config(height=listbox.size())
+
+
 window = Tk()
 window.title("Listbox")
 
@@ -14,11 +19,28 @@ listbox.insert(3,"java")
 listbox.insert(4,"Rust")
 listbox.insert(5,"HTML")
 
-submit_button = Button(window,text="Submit",
-                       font=("Arial",20),
+entry = Entry(window,font=("Arial",20),fg="black")
+entry.pack()
+frame = Frame(window)
+add_button = Button(frame,text="ADD",
+                    font=("Arial",15),
+                    bg="#f7ffbe",
+                    command=add_func)
+add_button.pack()
+submit_button = Button(frame,text="Submit",
+                       font=("Arial",15),
                        bg="#f7ffbe",
                        command=lambda: print(f"you have selected {listbox.get(listbox.curselection())}"))
 submit_button.pack()
+
+delete_button = Button(frame,text="Delete",
+                       font=("Arial",15),
+                       bg="#f7ffbe",
+                       command=lambda: listbox.delete(listbox.curselection()))
+listbox.config(height=listbox.size())
+delete_button.pack()
+
+frame.pack()
 
 listbox.config(height=listbox.size())
 window.mainloop()
