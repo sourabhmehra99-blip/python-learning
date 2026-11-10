@@ -5,19 +5,20 @@ from tkinter import *
 window = Tk()
 window.title("Listbox")
 
-listbox = Listbox(window,font=("consolas",30),
-                  bg="#f7ffde")
+listbox = Listbox(window,font=("Arial",20),bg="#f7ffbe")
 listbox.pack()
 
-listbox.insert(1,"OPPM book")
-listbox.insert(2,"Maths book")
-listbox.insert(3,"Evs book")
-listbox.insert(4,"SSC book")
-listbox.insert(5,"IT book")
+listbox.insert(1,"python")
+listbox.insert(2,"C++")
+listbox.insert(3,"java")
+listbox.insert(4,"Rust")
+listbox.insert(5,"HTML")
 
-submit = Button(window,text="submit", # listbox.get(listbox.curselection()) <-- this will give the selected item from the listbox
-                command=lambda: print(f"you have selected {listbox.get(listbox.curselection())}"))
-submit.pack()
+submit_button = Button(window,text="Submit",
+                       font=("Arial",20),
+                       bg="#f7ffbe",
+                       command=lambda: print(f"you have selected {listbox.get(listbox.curselection())}"))
+submit_button.pack()
 
-listbox.config(height=listbox.size()) # height gives the number of items to be displayed in the listbox
+listbox.config(height=listbox.size())
 window.mainloop()
