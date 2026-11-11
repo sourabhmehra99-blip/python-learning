@@ -36,25 +36,33 @@ listbox.insert(5,"HTML")
 entry = Entry(window,font=("Arial",20),fg="black")
 entry.pack()
 frame = Frame(window)
-add_button = Button(frame,text="ADD",
+frame.pack()
+add_button = Button(frame,text="ADD",height=1,width=9,
                     font=("Arial",15),
-                    bg="#f7ffbe",
+                    bg="grey",
                     command=add_func)
-add_button.pack()
-submit_button = Button(frame,text="Submit",
-                       font=("Arial",15),
-                       bg="#f7ffbe",
-                       command=submit_fun)
-submit_button.pack()
+add_button.grid(row=0,column=0)
 
-delete_button = Button(frame,text="Delete",
+submit_button = Button(frame,text="Submit",height=1,width=9,
                        font=("Arial",15),
-                       bg="#f7ffbe",
+                       bg="grey",
+                       command=submit_fun)
+submit_button.grid(row=0,column=1)
+
+
+delete_button = Button(frame,text="Delete",height=1,width=9,
+                       font=("Arial",15),
+                       bg="grey",
                        command=delete_fun)
 listbox.config(height=listbox.size())
-delete_button.pack()
+delete_button.grid(row=0,column=2)
 
-frame.pack()
+backspace_button = Button(frame,text="Backspace",height=1,width=9,
+                          font=("Arial",15),
+                          bg="grey",
+                          command=lambda: entry.delete(len(entry.get())-1,END))
+backspace_button.grid(row=0,column=3)
+
 
 listbox.config(height=listbox.size())
 window.mainloop()
