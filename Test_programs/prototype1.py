@@ -1,181 +1,165 @@
-# # prototype 1 
-# # unit conversion website
-
-# def distance():
-#     while True:
-#      print("---------- length conversion ----------")
-#      print("1.convert km to meter")
-#      print("2.convert km to cm")
-#      print("3.convert km to mm")
-#      print("4.convert mm to km")
-#      print("5.convert cm to km")
-#      print("6.convert meter to km")
-#      print("7.Exit")
-    
-#      try:
-#         choice = int(input("Enter your choice(1-7):"))
-#         if choice == 1:
-#                 km = float(input("Enter the distance in km: "))
-#                 meter = km *1000
-#                 print(f"the km: {km:.2f} in meter: {meter:.2f}")
-#         elif choice ==2:
-#                 km = float(input("Enter the distance in km: "))
-#                 cm = km *100000
-#                 print(f"the km: {km:.2f} in centimeter: {cm:.2f}")
-#         elif choice == 3:
-#                 km = float(input("Enter the distance in km: "))
-#                 mm = km * 1000000
-#                 print(f"the km: {km:.2f} in millimeter: {mm:.2f}")
-#         elif choice == 4:
-#                 mm = float(input("Enter the length in mm: "))
-#                 km = mm/1000000
-#                 print(f"the mm:{mm:.2f} in km: {km:.2f} ")
-#         elif choice ==5:
-#                 cm = float(input("Enter the length in cm: "))
-#                 km = cm/100000
-#                 print(f"the cm :{cm:.2f} in km: {km:.2f}")
-#         elif choice == 6:
-#                 meter = float(input("Enter length in meter :"))
-#                 km = meter/1000
-#                 print(f"the meter: {meter:.2f} in km: {km:.2f}")
-#         elif choice == 7:
-#                 print("Thanks for using unit converstion!")
-#                 break
-#         else:
-#                 print("Invalid choice ! Try again")
-
-#      except ValueError:
-#         print("Invalid input! Please enter a valid number.")
+import tkinter as tk
+from tkinter import ttk, messagebox
 
 
-# def temprature():
-#     while True:
-#         print("---------- temprature conversion ----------")
-#         print("1.convert celsius to all")
-#         print("2.convert fahrenheit to all")
-#         print("3.convert kelvin to all")
-#         print("4.Exit")
-
-    
-#         choice =int(input("Enter your choice(1-4): "))
-#         try:
-#             if choice == 1:
-#                 cel = float(input("Enter temprature in celsius: "))
-#                 fah = (cel *9/5) + 32
-#                 kel = cel + 273.25
-#                 print(f"The temprature in celsius: {cel:.2f}\nThe temprature in fahrenheit: {fah:.2f}\nThe temprature in kelvin: {kel:.2f}")
-#             elif choice == 2:
-#                 fah = float(input("Enter temprature in fahrenheit: "))
-#                 cel = (fah -32)*5/9
-#                 kel = (fah -32)*5/9 + 273.15
-#                 print(f"The temprature in celsius: {cel:.2f}\nThe temprature in fahrenheit: {fah:.2f}\nThe temprature in kelvin: {kel:.2f}")
-#             elif choice == 3:
-#                 kel = float(input("Enter temprature in kelvin: "))
-#                 cel = kel -273.15
-#                 fah = (kel-273.15)*9/5 +32
-#                 print(f"The temprature in celsius: {cel:.2f}\nThe temprature in fahrenheit: {fah:.2f}\nThe temprature in kelvin: {kel:.2f}")
-#             elif choice == 4:
-#                   print("Thanks for using conversion")
-#                   break
-#             else:
-#                   print("Invalid choice!\nChoose between (1-4)")
-#         except ValueError:
-#               print("Invalid statement ")
-
-# def main_menu():
-#     while True:
-#       print("---------- unit conversion ----------")
-#       print("1.conversion lenghts")
-#       print("2.conversion temprature")
-#       print("3.Exit")
-    
-#       choice = int(input("Enter your choice(1-2): "))
-#       if choice ==1:
-#           distance()
-#       elif choice == 2:
-#           temprature()
-#       elif choice == 3:
-#         print("Exit the program")
-#         break
-#       else:
-#           print("Invalid choice!")
-
-# main_menu()
-
-from tkinter import *
-
-def button_press(num):
-    global display_text
-
-    display_text = display_text +str(num)
-    display_label.set(display_text)
-
-window = Tk()
-
-window.title("unit conversion")
-window.geometry("500x480")
-
-display_text = ""
-display_label = StringVar()
-
-label = Label(window,text=display_label,font=('consolas',20),fg="white",background='black',width=28,height=2)
-label.pack()
-
-display = Frame(window)
-display.pack()
-
-frame = Frame(window)
-frame.pack()
-
-button1 =Button(frame,text="1",width=9,height=2,font=35,
-                command= lambda:button_press(1))
-button1.grid(row=0,column=0)
-
-button2 = Button(frame,text="2",width=9,height=2,font=35,
-                 command=lambda:button_press(2))
-button2.grid(row=0,column=1)
-
-button3 = Button(frame,text="3",width=9,height=2,font=35,
-                 command=lambda:button_press(3))
-button3.grid(row=0,column=2)
-
-button4 = Button(frame,text="4",width=9,height=2,font=35,
-                 command=lambda:button_press(4))
-button4.grid(row=1,column=0)
-
-button5 = Button(frame,text="5",width=9,height=2,font=35,
-                 command=lambda:button_press(5))
-button5.grid(row=1,column=1)
-
-button6 = Button(frame,text="6",width=9,height=2,font=35,
-                 command=lambda:button_press(6))
-button6.grid(row=1,column=2)
-
-button7 = Button(frame,text="7",width=9,height=2,font=35,
-                 command=lambda:button_press(7))
-button7.grid(row=2,column=0)
-
-button8 = Button(frame,text="8",width=9,height=2,font=35,
-                 command=lambda:button_press(8))
-button8.grid(row=2,column=1)
-
-button9 = Button(frame,text="9",width=9,height=2,font=35,
-                 command=lambda:button_press(9))
-button9.grid(row=2,column=2)
-
-button0 = Button(frame,text="0",width=9,height=2,font=35,
-                 command=lambda:button_press(0))
-button0.grid(row=3,column=0)
-
-decimal = Button(frame,text=".",width=9,height=2,font=35,
-                  command=lambda:button_press('.'))
-decimal.grid(row=3,column=1)
-
-# equal = Button(frame,text="=",width=9,height=2,font=35,
-#                command= equal)
-# equal.grid(row=3,column=2)
+def convert_length(value, from_unit, to_unit):
+    factors = {
+        "km": 1000,
+        "m": 1,
+        "cm": 0.01,
+        "mm": 0.001,
+    }
+    value_in_meters = value * factors[from_unit]
+    return value_in_meters / factors[to_unit]
 
 
+def convert_temperature(value, from_unit, to_unit):
+    if from_unit == to_unit:
+        return value
 
-window.mainloop()
+    if from_unit == "C":
+        celsius = value
+    elif from_unit == "F":
+        celsius = (value - 32) * 5 / 9
+    else:
+        celsius = value - 273.15
+
+    if to_unit == "C":
+        return celsius
+    if to_unit == "F":
+        return (celsius * 9 / 5) + 32
+    return celsius + 273.15
+
+
+class UnitConverterApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Unit Converter")
+        self.root.geometry("560x380")
+        self.root.resizable(False, False)
+
+        self.category_var = tk.StringVar(value="Length")
+        self.input_var = tk.StringVar()
+        self.from_unit_var = tk.StringVar(value="km")
+        self.to_unit_var = tk.StringVar(value="m")
+        self.result_var = tk.StringVar(value="Result will appear here")
+
+        self.length_units = ["km", "m", "cm", "mm"]
+        self.temperature_units = ["C", "F", "K"]
+
+        self.create_widgets()
+        self.update_units()
+
+    def create_widgets(self):
+        main = ttk.Frame(self.root, padding=20)
+        main.pack(fill="both", expand=True)
+
+        title = ttk.Label(main, text="Unit Converter", font=("Segoe UI", 20, "bold"))
+        title.grid(row=0, column=0, columnspan=3, pady=(0, 16))
+
+        ttk.Label(main, text="Category", font=("Segoe UI", 11)).grid(
+            row=1, column=0, sticky="w", pady=8
+        )
+        category_menu = ttk.Combobox(
+            main,
+            textvariable=self.category_var,
+            values=["Length", "Temperature"],
+            state="readonly",
+            width=20,
+        )
+        category_menu.grid(row=1, column=1, sticky="ew", pady=8)
+        category_menu.bind("<<ComboboxSelected>>", lambda _event: self.update_units())
+
+        ttk.Label(main, text="Value", font=("Segoe UI", 11)).grid(
+            row=2, column=0, sticky="w", pady=8
+        )
+        self.value_entry = ttk.Entry(main, textvariable=self.input_var, width=24)
+        self.value_entry.grid(row=2, column=1, sticky="ew", pady=8)
+
+        ttk.Label(main, text="From", font=("Segoe UI", 11)).grid(
+            row=3, column=0, sticky="w", pady=8
+        )
+        self.from_menu = ttk.Combobox(main, textvariable=self.from_unit_var, state="readonly", width=20)
+        self.from_menu.grid(row=3, column=1, sticky="ew", pady=8)
+
+        ttk.Label(main, text="To", font=("Segoe UI", 11)).grid(
+            row=4, column=0, sticky="w", pady=8
+        )
+        self.to_menu = ttk.Combobox(main, textvariable=self.to_unit_var, state="readonly", width=20)
+        self.to_menu.grid(row=4, column=1, sticky="ew", pady=8)
+
+        button_frame = ttk.Frame(main)
+        button_frame.grid(row=5, column=0, columnspan=3, pady=(16, 12), sticky="ew")
+
+        convert_btn = ttk.Button(button_frame, text="Convert", command=self.handle_convert)
+        convert_btn.pack(side="left", padx=(0, 10))
+
+        swap_btn = ttk.Button(button_frame, text="Swap Units", command=self.swap_units)
+        swap_btn.pack(side="left")
+
+        clear_btn = ttk.Button(button_frame, text="Clear", command=self.clear_fields)
+        clear_btn.pack(side="left", padx=(10, 0))
+
+        result_box = ttk.Label(
+            main,
+            textvariable=self.result_var,
+            font=("Segoe UI", 12, "bold"),
+            anchor="center",
+            relief="groove",
+            padding=12,
+        )
+        result_box.grid(row=6, column=0, columnspan=3, sticky="ew", pady=(10, 0))
+
+        for col in range(3):
+            main.columnconfigure(col, weight=1)
+
+    def update_units(self):
+        units = self.length_units if self.category_var.get() == "Length" else self.temperature_units
+
+        self.from_menu["values"] = units
+        self.to_menu["values"] = units
+
+        self.from_unit_var.set(units[0])
+        self.to_unit_var.set(units[1])
+        self.result_var.set("Result will appear here")
+
+    def swap_units(self):
+        from_unit = self.from_unit_var.get()
+        to_unit = self.to_unit_var.get()
+        self.from_unit_var.set(to_unit)
+        self.to_unit_var.set(from_unit)
+
+    def clear_fields(self):
+        self.input_var.set("")
+        self.result_var.set("Result will appear here")
+        self.value_entry.focus()
+
+    def handle_convert(self):
+        raw_value = self.input_var.get().strip()
+        if not raw_value:
+            messagebox.showwarning("Missing value", "Please enter a number first.")
+            return
+
+        try:
+            value = float(raw_value)
+        except ValueError:
+            messagebox.showerror("Invalid input", "Please enter a valid numeric value.")
+            return
+
+        from_unit = self.from_unit_var.get()
+        to_unit = self.to_unit_var.get()
+        category = self.category_var.get()
+
+        if category == "Length":
+            result = convert_length(value, from_unit, to_unit)
+        else:
+            result = convert_temperature(value, from_unit, to_unit)
+
+        self.result_var.set(f"{value:.4f} {from_unit} = {result:.4f} {to_unit}")
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = UnitConverterApp(root)
+    root.mainloop()
 
