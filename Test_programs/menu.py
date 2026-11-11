@@ -19,6 +19,10 @@ def delete_fun():
     for index in listbox.curselection():
         listbox.delete(index)
 
+def back_fun():
+    entry.delete(len(entry.get())-1,END)
+
+
 window = Tk()
 
 listbox = Listbox(window,font=("Arial",20),
@@ -53,6 +57,11 @@ delete_button = Button(window,text="Delete",
                        font=("Arial",17),
                        command=delete_fun)
 delete_button.pack()
+
+backspace_button = Button(window,text="Backspace",
+                          font=("Arial",17),
+                          command=back_fun)
+backspace_button.pack()
 
 window.title("Menu")
 window.mainloop()
