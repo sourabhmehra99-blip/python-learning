@@ -12,8 +12,9 @@ def submit():
     print("Email:", email)
 
 window = Tk()
+window.title("Login System")
 
-username = Label(window,text="Username",font=("arial",10)).grid(row=0,column=0)
+username = Label(window,text="Username",anchor="w",font=("arial",10),padx=3,pady=3).grid(row=0,column=0)
 
 userentry = Entry(window,width=20,font=("arial",10))
 userentry.grid(row=0,column=1)
