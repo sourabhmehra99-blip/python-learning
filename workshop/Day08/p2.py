@@ -65,3 +65,53 @@ print(cont)
 
 a1 = {1:{"akash":1234,},2:{"raj":46765}}
 print(a1[1]["akash"])
+
+bank = {"1234":{"account name":"akash", "balance":1000}, "3456":{"account name":"ram", "balance":2000}}
+
+while True:
+    print("1. Create Account")
+    print("2. Display")
+    print("3. Deposit")
+    print("4. Withdraw")
+    print("5. Update Info")
+    print("6. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        user = input("Enter user_id : ")
+        user_name = input("Enter user name: ")
+        balance = int(input("Enter balance: "))
+        bank[user_name] = {"account name":user,"balance":balance}
+    elif choice == 2:
+            for x,y in bank.items():
+                print("[",x,":",y,"]")
+    elif choice == 3:
+            name = (input("Enter account name: "))
+            if name in bank.keys():
+                  amount = int(input("Enter amount to deposit: "))
+                  bank [name]["balance"] += amount
+                  print("Amount deposit sucessfully")
+                  print(f"Current balance: {bank[name]["balance"]}")
+            else:
+                  print("No account found")
+    elif choice == 4:
+          name = (input("Enter account name: "))
+          if name in bank.keys():
+            amount = int(input("Enter amount to withdraw: "))
+            bank [name]["balance"] -= amount
+            print("Amount withdraw sucessfully")
+            print(f"Current balance: {bank[name]["balance"]}")
+          else:
+                print("No account found")
+    elif choice == 5:  
+         name = input("Enter account id: ")
+         if name in bank.keys():
+              print("====Change Name====")
+              new_name = input("Enter new name: ")
+              bank[name]["account name"] = new_name    
+         else:
+              print("No account found")
+    elif choice == 6:
+         break 
+    
